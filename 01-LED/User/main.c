@@ -1,11 +1,10 @@
 /** --------------------------------------------------
-* @Project	: Lanfeng Intelligent Flight(LFIF)
-* @Version	: V 2.0 (Test Version)
+* @Project	: Lanfeng STM32 Project(LFSTM32)
+* @Version	: V 1.0
 * @Hardware	: STM32F4XX
 * @Author	: Xu Zhe
-* @Date		: 2020-09-08
-* @Brief	: Communication Test
-			  MPU9250 Test
+* @Date		: 2021-04-25
+* @Brief	: 01-LED Test
 ---------------------------------------------------*/
 
 /* Head Files */
