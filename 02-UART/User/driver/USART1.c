@@ -56,8 +56,8 @@ void usart1_init(u32 baudrate)
 	
 	/* 5. NVIC Config */
 	NVIC_Config.NVIC_IRQChannel = USART1_IRQn;
-	NVIC_Config.NVIC_IRQChannelPreemptionPriority = 3;
-	NVIC_Config.NVIC_IRQChannelSubPriority = 3;
+	NVIC_Config.NVIC_IRQChannelPreemptionPriority = 2;
+	NVIC_Config.NVIC_IRQChannelSubPriority = 2;
 	NVIC_Config.NVIC_IRQChannelCmd = ENABLE;
 	NVIC_Init(&NVIC_Config);
 }

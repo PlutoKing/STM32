@@ -36,3 +36,6 @@
 .\objects\main.o: .\STM32\lib\inc\stm32f4xx_dac.h
 .\objects\main.o: .\STM32\lib\inc\stm32f4xx_dcmi.h
 .\objects\main.o: .\STM32\lib\inc\stm32f4xx_fsmc.h
+.\objects\main.o: .\User\driver\USART1.h
+.\objects\main.o: D:\Application\MDK\ARM\ARMCC\Bin\..\include\string.h
+.\objects\main.o: .\User\driver\led.h

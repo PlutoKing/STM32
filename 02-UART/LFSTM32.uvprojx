@@ -401,6 +401,11 @@
               <FileType>1</FileType>
               <FilePath>.\User\driver\USART1.c</FilePath>
             </File>
+            <File>
+              <FileName>led.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\User\driver\led.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
