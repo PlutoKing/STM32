@@ -35,12 +35,12 @@ void usart1_init(u32 baudrate)
 	GPIO_PinAFConfig(GPIOA,GPIO_PinSource10,GPIO_AF_USART1);
 
 	/* 3. GPIO Config */
-	GPIO_Config.GPIO_Pin = GPIO_Pin_9 | GPIO_Pin_10;// Pin
-	GPIO_Config.GPIO_Mode = GPIO_Mode_AF;			// Alternative function
-	GPIO_Config.GPIO_Speed = GPIO_Speed_50MHz;		// 50M
-	GPIO_Config.GPIO_OType = GPIO_OType_PP;			// Push-pull
-	GPIO_Config.GPIO_PuPd = GPIO_PuPd_UP;			// High level
-	GPIO_Init(GPIOA,&GPIO_Config);					// Initialize the GPIO config
+	GPIO_Config.GPIO_Pin = GPIO_Pin_9 | GPIO_Pin_10;	// Pin
+	GPIO_Config.GPIO_Mode = GPIO_Mode_AF;				// Alternative function
+	GPIO_Config.GPIO_Speed = GPIO_Speed_50MHz;			// 50M
+	GPIO_Config.GPIO_OType = GPIO_OType_PP;				// Push-pull
+	GPIO_Config.GPIO_PuPd = GPIO_PuPd_UP;				// High level
+	GPIO_Init(GPIOA,&GPIO_Config);						// Initialize the GPIO config
 
 	/* 4. UART Config */
 	UART_Config.USART_BaudRate = baudrate;				// Baud rate
