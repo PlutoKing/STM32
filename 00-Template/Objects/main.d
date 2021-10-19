@@ -1,9 +1,8 @@
-.\objects\main.o: User\main.c
-.\objects\main.o: .\STM32\sys\delay.h
-.\objects\main.o: .\STM32\sys\sys.h
+.\objects\main.o: Project\main.c
+.\objects\main.o: .\STM32\sys\stm32f4xx_it.h
 .\objects\main.o: .\STM32\sys\stm32f4xx.h
 .\objects\main.o: .\STM32\core\core_cm4.h
-.\objects\main.o: D:\Application\MDK\ARM\ARMCC\Bin\..\include\stdint.h
+.\objects\main.o: D:\Applications\MDK\ARM\ARMCC\Bin\..\include\stdint.h
 .\objects\main.o: .\STM32\core\core_cmInstr.h
 .\objects\main.o: .\STM32\core\core_cmFunc.h
 .\objects\main.o: .\STM32\core\core_cm4_simd.h

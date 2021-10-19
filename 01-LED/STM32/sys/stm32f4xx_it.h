@@ -36,6 +36,18 @@
 /* Includes ------------------------------------------------------------------*/
 #include "stm32f4xx.h"
 
+extern u32 it_cnt_2000;
+extern u32 it_cnt_5000;
+extern u32 it_cnt_10000;
+extern u32 it_cnt_20000;
+extern u32 it_cnt_50000;
+
+extern u32 sys_time_ms;
+	 
+void SysTick_Init(void);
+void Delay_us(u32 nus);
+void Delay_ms(u32 nms);
+	 
 /* Exported types ------------------------------------------------------------*/
 /* Exported constants --------------------------------------------------------*/
 /* Exported macro ------------------------------------------------------------*/

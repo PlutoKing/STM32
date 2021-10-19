@@ -29,7 +29,16 @@
 
 /* Includes ------------------------------------------------------------------*/
 #include "stm32f4xx_it.h"
- 
+
+
+u32 TimingDelay;
+u32 it_cnt_2000;
+u32 it_cnt_5000;
+u32 it_cnt_10000;
+u32 it_cnt_20000;
+u32 it_cnt_50000;
+
+u32 sys_time_ms;	// 系统时间（ms）
 
 /** @addtogroup Template_Project
   * @{
@@ -134,6 +143,46 @@ void PendSV_Handler(void)
 {
 }
 
+/** --------------------------------------------------
+* @Function	: SysTick_Init
+* @Brief	: 系统时钟初始化，SystemCoreClock = 168M
+* @param	: void
+* @return	: void
+---------------------------------------------------*/
+void SysTick_Init(void)
+{
+	// 每1us中断一次
+	if (SysTick_Config(SystemCoreClock / 1000000))
+	{
+		while(1);
+	}
+}
+
+/** --------------------------------------------------
+* @Function	: Delay_us
+* @Brief	: 微秒延时函数
+* @param	: nus - 微秒数
+* @return	: void
+---------------------------------------------------*/
+void Delay_us(u32 nus)
+{
+	TimingDelay = nus;
+	while (TimingDelay != 0);
+}
+
+
+/** --------------------------------------------------
+* @Function	: Delay_ms
+* @Brief	: 毫秒延时函数
+* @param	: nms - 毫秒数
+* @return	: void
+---------------------------------------------------*/
+void Delay_ms(u32 nms)
+{
+	TimingDelay = nms*1000;
+	while (TimingDelay != 0);
+}
+
 /**
   * @brief  This function handles SysTick Handler.
   * @param  None
@@ -141,7 +190,16 @@ void PendSV_Handler(void)
   */
 void SysTick_Handler(void)
 {
-	
+	if(TimingDelay != 0x00)
+	{
+		TimingDelay--;
+	}
+	it_cnt_2000++;
+	it_cnt_5000++;
+	it_cnt_10000++;
+	it_cnt_20000++;
+	it_cnt_50000++;
+	sys_time_ms++;
 }
 
 /******************************************************************************/
